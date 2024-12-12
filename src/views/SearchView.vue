@@ -48,6 +48,7 @@ function filterResultList(List:any, inputName: string) {
             placeholder="请输入搜索关键词"
             show-action
             @clear="onclear"
+            @search="onClickSearch"
         >
           <template #action>
             <a @click="onClickSearch">搜索</a>
