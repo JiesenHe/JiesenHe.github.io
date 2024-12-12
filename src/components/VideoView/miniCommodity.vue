@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 function goToProductPage() {
   // 这里是商品链接，可以替换为实际的商品页面链接
   window.open('/detail', '_blank');
@@ -12,6 +13,7 @@ function goToProductPage() {
   </div>
 
   <!-- 商品链接卡牌 -->
+  <router-link to="/detail" class="product-link">
   <div class="product-card">
     <img class="product-image" src="/public/images/freight3/7.jpg" alt="商品图片" />
     <div class="product-info">
@@ -23,6 +25,7 @@ function goToProductPage() {
       </div>
     </div>
   </div>
+  </router-link>
   
 </template>
 
