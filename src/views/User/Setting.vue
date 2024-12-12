@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const activeNames = ref(['0'])
-
+const activeNames1 = ref(['0'])
+const activeNames2 = ref(['0'])
 import { useRouter } from 'vue-router'
 
 // 获取 router 实例
@@ -41,9 +41,14 @@ const goBack = () => {
         <van-cell title="授权管理"   class="cell-item" />
         <van-cell title="问题反馈"   class="cell-item" />
         <van-cell title="联系我们"   class="cell-item" />
-        <van-collapse v-model="activeNames">
+        <van-collapse v-model="activeNames1">
           <van-collapse-item title="关于VigorMall" name="1">
             在科技飞速发展的时代浪潮中，VigorMall 应势而生，怀揣着对数码世界的无限热忱与独特见解，致力于打造一个全方位、高品质的手机电脑数码电子商城，为广大数码爱好者与消费者提供极致体验与专业服务。
+          </van-collapse-item>
+        </van-collapse>
+        <van-collapse v-model="activeNames2">
+          <van-collapse-item title="特别鸣谢" name="1">
+            感谢为<a class="thanks">宋汐静</a>，<a class="thanks">agggg</a>，<a class="thanks">好运连连来</a>，为VigorMall提供的支持与帮助，没有你们的帮助就没有VigorMall的诞生，感谢你们为项目带来了无限可能。
           </van-collapse-item>
         </van-collapse>
         <van-cell title="Gitee仓库"  is-link :url="'https://gitee.com/jiesenhe/vigor-mall'"  class="cell-item" />
@@ -105,5 +110,9 @@ page {
   overflow: hidden; /* 防止溢出 */
   padding: 10px  10px 10px 10px;
   --van-card-background: white;
+}
+.thanks{
+  color:#000000;
+  font-weight: bold;
 }
 </style>

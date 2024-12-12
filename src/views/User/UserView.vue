@@ -87,6 +87,10 @@
   };
   const show = ref(false);
 
+  const fakelogin = () => {
+    isLoggedIn.value = true;
+  };
+
 
 </script>
 
@@ -111,7 +115,7 @@
           <div class="extra">点击登录账号</div>
         </div>
       </router-link>
-        <div class="settings" style="margin-right: 40px">
+        <div class="settings" style="margin-right: 40px" @click="fakelogin">
           <van-icon name="service-o"   size="22" />
         </div>
       <router-link to="/setting">
