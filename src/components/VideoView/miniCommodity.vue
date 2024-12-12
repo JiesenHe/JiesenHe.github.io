@@ -1,9 +1,4 @@
 <script setup lang="ts">
-
-function goToProductPage() {
-  // 这里是商品链接，可以替换为实际的商品页面链接
-  window.open('/detail', '_blank');
-}
 </script>
 
 <template>
@@ -21,7 +16,7 @@ function goToProductPage() {
       <a class="product-detail">AI9HX 370 RTX4070 天青色</a>
       <div class="price-and-buy">
         <p class="product-price">￥ 11999</p>
-        <button class="buy-now" @click="goToProductPage">购买</button>
+        <button class="buy-now">购买</button>
       </div>
     </div>
   </div>
